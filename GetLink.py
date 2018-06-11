@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-
-#!/usr/bin/python3
 import sys
 from openpyxl import Workbook
 from openpyxl import load_workbook
@@ -12,7 +10,7 @@ from openpyxl.formula import Tokenizer
 #read file excel using input
 wb = load_workbook(sys.argv[1])
 sheet = wb.worksheets[0]
-print("Phai them cot ben phai")
+print("Phai them 2 cot ben phai")
 xcolumn = int(input('Column: '))
 xfrom = int(input ('from: '))
 xto = int(input ('to: '))
@@ -48,7 +46,8 @@ for xrow in range(xfrom, xto):
         img = img.find('img')
         srcf = img.get('src')
         srcb =  srcf.replace('front.png','back.png')
-        sheet.cell(row = xrow, column= xcolumn +1).value = srcf + ', ' + srcb
+        sheet.cell(row = xrow, column= xcolumn +1).value = srcf
+        sheet.cell(row = xrow, column= xcolumn +1).value = srcb
     
 # write link
 wb.save(sys.argv[1])
