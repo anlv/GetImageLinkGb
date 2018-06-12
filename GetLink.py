@@ -11,6 +11,8 @@ from openpyxl.formula import Tokenizer
 wb = load_workbook(sys.argv[1])
 sheet = wb.worksheets[0]
 print("Phai them 2 cot ben phai")
+
+#xcolumn la cot chua link trang gear
 xcolumn = int(input('Column: '))
 xfrom = int(input ('from: '))
 xto = int(input ('to: '))
